@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*1. Targeting attribute namr*/
+        input[type]{
+            background-color: aqua;
+        }
+        /*2. by exact value*/
+        input[type="password"]{
+            border: 2px solid blue;
+        }
+        /*3. Target the word present inside anyware in the attribute value*/
+        a[href*="facebook"]{
+            text-decoration: none;
+        }
+        /*4. The exact word inside the attribute name*/
+        button[class~="btn"]{
+            background-color: aquamarine;
+            font-size: 20px;
+        }
+        .primary{
+            border: 2px solid red;
+        }
+        /*5. Ending the value*/
+        img[src$="png"]{
+            border: 2px solid brown;
+        }
+        img[src$="jpg"]{
+            border: 2px solid pink;
+        }
+        /*6. Starting value*/
+        p[class^="first"]{
+            background-color: skyblue;
+        }
+        p[class^="second"]{
+            background-color: blueviolet;
+        }
+        /* 7. Hyphen value */
+        p[class|="en"]{
+            border: 2px solid purple;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Attribute Selector</h1>
+    <h2>Input Elements</h2>
+    <input type="text" name="" id="" placeholder="Enter Your Name">
+    <input type="password" name="" id="" placeholder="Enter Your password">
+    <input type="email" name="" id="" placeholder="Enter Your Email">
+    <br><br>
+
+    <h2>Links</h2>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://www.instagram.com/">Instagram</a>
+    <br><br>
+
+    <h2>Buttons</h2>
+    <button class="btn primary">Primary</button>
+    <button class="btn secondary">Secondary</button>
+    <br><br>
+
+    <h2>Images</h2>
+    <img src="img.jpg" alt="Image">
+    <img src="img.png" alt="Magic">
+    <br><br>
+
+    <h2>Paragraphs</h2>
+    <p class="first Para">First Paragraph</p>
+    <p class="Second Para">Second Paragraph</p>
+    <br><br>
+
+    <p class="en-In">Namaste</p>
+    <p class="en">Hello</p>
+    <p class="fr">Bojour</p>
+    <p class="gj">Kem cho</p>
+    <p class="jp">Konnichiwa</p>
+</body>
+</html>

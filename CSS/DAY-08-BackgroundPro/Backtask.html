@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recent Properties - Flexbox Version</title>
+    
+    <style>
+        /* Base Reset */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Main Container Box */
+        .main-wrapper {
+            max-width: 1250px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+        }
+
+        /* Header Section */
+        .header-box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-box h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header-box p {
+            color: #777;
+        }
+
+        /* Flexbox Container for 8 Pictures */
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap to next line */
+            justify-content: center; /* Centers cards if row isn't full */
+        }
+
+        /* The Card Box (using background properties) */
+        .property-card {
+            flex: 0 1 calc(25% - 20px); /* 4 per row, minus margin */
+            margin: 10px;
+            height: 300px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+
+            /* Background Image Properties */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Responsive adjustment: 2 per row on tablets */
+        @media (max-width: 1024px) {
+            .property-card {
+                flex: 0 1 calc(50% - 20px);
+            }
+        }
+
+        /* Responsive adjustment: 1 per row on phones */
+        @media (max-width: 600px) {
+            .property-card {
+                flex: 0 1 100%;
+            }
+        }
+
+        /* Status Badge */
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            padding: 5px 12px;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+
+        /* Info Overlay Box */
+        .overlay {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(5px);
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+
+        .overlay h3 {
+            margin: 0 0 5px 0;
+            font-size: 15px;
+        }
+
+        .overlay p {
+            font-size: 12px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .price-btn {
+            background-color: #27ae60;
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header class="header-box">
+            <h1>Recent Properties</h1>
+            <p>Discover how much the latest properties have been sold for.</p>
+        </header>
+
+        <div class="flex-container">
+            <div class="property-card" style="background-image: url('house1.jpg');">
+                <div class="badge" style="background-color: #ff2d55;">FOR RENT</div>
+                <div class="overlay">
+                    <h3>176 Kingsberry Anderson</h3>
+                    <p>Rochester, NY 14624</p>
+                    <div class="price-btn">$3100/month</div>
+                </div>
+            </div>
+
+            <div class="property-card" style="background-image: url('house2.jpg');">
+                <div class="badge" style="background-color: #ffb400;">FOR SALE</div>
+                <div class="overlay">
+                    <h3>45 Lianne Dr, Greece Street</h3>
+                    <p>Tasley, VA 23441</p>
+                    <div class="price-btn">$150,000</div>
+                </div>
+            </div>
+
+            <div class="property-card" style="background-image: url('house3.jpg');">
+                <div class="badge" style="background-color: #ff2d55;">FOR RENT</div>
+                <div class="overlay">
+                    <h3>6101 Aqua Ave Apt 603</h3>
+                    <p>Miami Beach, FL 33141</p>
+                    <div class="price-btn">$1255/month</div>
+                </div>
+            </div>
+
+            <div class="property-card" style="background-image: url('house4.jpg');">
+                <div class="badge" style="background-color: #ff2d55;">FOR RENT</div>
+                <div class="overlay">
+                    <h3>339 N Oakhurst Dr Apt 303</h3>
+                    <p>Beverly Hills, CA 90210</p>
+                    <div class="price-btn">$3000/month</div>
+                </div>
+            </div>
+            
+            </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      background: #f6f7fb;
+      color: #1c1d3a;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Top navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+    }
+
+    .nav-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 20px;
+      color: #262a86;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #4b48e0, #e93678);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: #171717;
+    }
+
+    .nav-links span {
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-links span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #4b48e0;
+      transition: width 0.2s ease;
+    }
+
+    .nav-links span:hover::after {
+      width: 100%;
+    }
+
+    .btn-talk {
+      background: #1f3bb3;
+      color: #ffffff;
+      padding: 10px 22px;
+      font-size: 14px;
+      border-radius: 30px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Page container */
+    .page {
+      max-width: 1140px;
+      margin: 40px auto 60px;
+      padding: 0 20px 40px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-heading h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #15163f;
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    /* Offerings grid */
+    .offerings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 26px 24px 22px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #15163f;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 18px;
+    }
+
+    /* Icon row */
+    .icon-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .tech-pill {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 11px;
+      color: #111827;
+    }
+
+    .tech-pill span {
+      margin-top: 6px;
+    }
+
+    .icon-circle {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #f3f4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: #4b48e0;
+      border: 1px solid #e5e7eb;
+    }
+
+    /* Simple colored initials instead of real logos */
+    .voip { background: #eef2ff; color: #4f46e5; }
+    .mob  { background: #ecfdf3; color: #16a34a; }
+    .web  { background: #eff6ff; color: #2563eb; }
+    .devops { background: #fef3c7; color: #f97316; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .offerings-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+      <header class="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <div class="logo-mark"></div>
+        <span>INEXTRIX</span>
+      </div>
+
+      <nav class="nav-links">
+        <span>SERVICES</span>
+        <span>SOLUTIONS</span>
+        <span>OUR PRODUCTS</span>
+        <span>HIRE DEVELOPERS</span>
+        <span>ABOUT</span>
+      </nav>
+
+      <button class="btn-talk">Let's Talk</button>
+    </div>
+  </header>
+
+  <!-- Offerings section -->
+  <main class="page">
+    <section>
+      <div class="section-heading">
+        <h2>Our Offerings</h2>
+        <p>Our subject matter experts and technical specialists ensure you get transformative technologies, impressive scale, and supersonic speed.</p>
+      </div>
+
+      <div class="offerings-grid">
+
+        <!-- VoIP -->
+        <article class="card">
+          <h3>VoIP Development</h3>
+          <p>Quality communication propels ambitions and growth in organizations. We build sustainable, scalable, and real time communication tools aligned with your business goals.</p>
+
+          <div class="icon-row">
+            <div class="tech-pill">
+              <div class="icon-circle voip">FS</div>
+              <span>Freeswitch</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle voip">AS</div>
+              <span>Asterisk</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle voip">OS</div>
+              <span>Opensips</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle voip">KA</div>
+              <span>Kamailio</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle voip">WR</div>
+              <span>WebRTC</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mobile -->
+        <article class="card">
+          <h3>Mobile App Development</h3>
+          <p>Extend your reach and clientele with engaging mobile applications that fuel returns and adaptability with native and cross platform mobile app development.</p>
+
+          <div class="icon-row">
+            <div class="tech-pill">
+              <div class="icon-circle mob">A</div>
+              <span>Android</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle mob">i</div>
+              <span>iOS</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle mob">RN</div>
+              <span>React Native</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle mob">F</div>
+              <span>Flutter</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle mob">P</div>
+              <span>Progressive Web</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Web -->
+        <article class="card">
+          <h3>Web Development</h3>
+          <p>Reduce bounce rates, improve navigation, and increase returning visitors with enchanting web apps and websites built by a leading web development company.</p>
+
+          <div class="icon-row">
+            <div class="tech-pill">
+              <div class="icon-circle web">R</div>
+              <span>React</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle web">A</div>
+              <span>Angular</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle web">N</div>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle web">L</div>
+              <span>Laravel</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle web">JS</div>
+              <span>Javascript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- DevOps -->
+        <article class="card">
+          <h3>DevOps Services</h3>
+          <p>Propel your business scale by harmonizing development and operations to build high quality products within the shortest time and gain a competitive advantage.</p>
+
+          <div class="icon-row">
+            <div class="tech-pill">
+              <div class="icon-circle devops">J</div>
+              <span>Jenkins</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle devops">D</div>
+              <span>Docker</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle devops">G</div>
+              <span>Git</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle devops">A</div>
+              <span>Ansible</span>
+            </div>
+            <div class="tech-pill">
+              <div class="icon-circle devops">K</div>
+              <span>Kubernetes</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

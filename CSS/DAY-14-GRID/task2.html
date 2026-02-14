@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Gallery Layout</title>
+    <style>
+        /* 1. Basic Reset and Body Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 2. Main Header Styling */
+        header {
+            background-color: #000;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* 3. The Grid Container */
+        .gallery-grid {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            /* Columns Logic: 
+               1fr 1fr = The space for Icebergs & Rain
+               2fr     = The space for Beach (roughly equal to Icebergs+Rain)
+               4fr     = The space for Mountains (roughly 50% of total width)
+            */
+            grid-template-columns: 1fr 1fr 2fr 3fr;
+            
+            grid-template-rows: 250px 250px 180px;
+            
+            gap: 5px;
+        }
+
+        .grid-item {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        /* Label Styling (The text boxes) */
+        .label {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(128, 128, 128, 0.6); /* Semi-transparent grey */
+            color: white;
+            padding: 10px 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            width: 80%;
+            text-align: center;
+        }
+
+        /* 5. Placing Specific Items on the Grid */
+
+        /* Jungles: Spans top left (columns 1-3) */
+        .item-jungles {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+            background-image: url('https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        /* Mountains: Spans the entire right side (row 1-4, col 4) */
+        .item-mountains {
+            grid-column: 4 / 5;
+            grid-row: 1 / 4;
+            background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+        }
+
+        /* Desert: Middle Left */
+        .item-desert {
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            background-image: url('https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+        }
+
+        /* Beach: Vertical strip next to Desert */
+        .item-beach {
+            grid-column: 3 / 4;
+            grid-row: 2 / 4; /* Spans down to cover the height of Desert + Icebergs */
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+        }
+
+        /* Icebergs: Bottom Left */
+        .item-icebergs {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            background-image: url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+
+        /* Rain: Bottom Middle-Left */
+        .item-rain {
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+            background-image: url('https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');
+        }
+
+        /* 6. Responsive Design (Stacking for mobile) */
+        @media (max-width: 768px) {
+            .gallery-grid {
+                display: flex;
+                flex-direction: column;
+            }
+            .grid-item {
+                height: 250px; /* Fixed height for stacked items */
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nature's Gallery</h1>
+    </header>
+
+    <div class="gallery-grid">
+        <div class="grid-item item-jungles">
+            <div class="label">Jungles</div>
+        </div>
+
+        <div class="grid-item item-mountains">
+            <div class="label">Mountains</div>
+        </div>
+
+        <div class="grid-item item-desert">
+            <div class="label">Desert</div>
+        </div>
+
+        <div class="grid-item item-beach">
+            <div class="label">Beach</div>
+        </div>
+
+        <div class="grid-item item-icebergs">
+            <div class="label">Icebergs</div>
+        </div>
+
+        <div class="grid-item item-rain">
+            <div class="label">Rain</div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .main-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .rightside {
+        background-color: #fff;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+    }
+    .leftside {
+        background-color: #f0f0f0;
+        width: 50%;
+        height: 100vh;
+        border: 1px solid black;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="rightside">
+            <h2>Welcome Back</h2>
+            <p>please enter your details</p>
+            <form action="">
+                <div class="input-grp">
+                <label for="email">Email address:</label><br>
+                <input type="email" name="email" id="email">
+                </div>
+
+                <div class="input-grp">
+                <label for="password">Password:</label><br>
+                <input type="password" name="password" id="password">
+                </div>
+
+                 <div class="input-grp">
+                <span><input type="checkbox" name="checkbox" id="checkbox">Remember for 30 days</span>
+                <a href="">Forgot Password?</a>
+                </div>
+
+                <div class="input-grp"><div class="input-grp">
+                <button type="submit">Sign In</button>
+                </div>
+
+                <div class="input-grp">
+                <button><span>icon</span> sign in with google</button>
+                </div>
+
+                <div class="input-grp">
+                <span>Don't have an account? <a href="">Sign Up</a></span>
+                </div>
+            </form>
+        </div>
+        <div class="leftside"></div>
+    </div>
+    
+</body>
+</html>

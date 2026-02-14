@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      h1 {
+        font-size: 40px;
+        color: navy;
+      }
+      h2 {
+        text-decoration-line: underline;
+        font-size: 30px;
+      }
+      .layout {
+        width: 100%;
+        height: 80vh;
+        border: 1px solid;
+        padding: 20px;
+      }
+      .race-track {
+        width: 80%;
+        height: 100px;
+        border-bottom: 3px dashed gray;
+        border-right: 3px solid red;
+        display: flex;
+        padding: 5px;
+      }
+      .race-track > img {
+        width: 180px;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        animation: race 20s forwards;
+      }
+      #img1 {
+        animation-timing-function: linear;
+      }
+      #img2 {
+        animation-timing-function: ease;
+      }
+      #img3 {
+        animation-timing-function: ease-in;
+      }
+      #img4 {
+        animation-timing-function: ease-out;
+      }
+      #img5 {
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes race {
+        from {
+          transform: translate(0);
+        }
+        to {
+          transform: translate(80vw);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>transition-timing-function Demo</h1>
+    <h2>Baburao Ganapatrao Aapte Racing</h2>
+    <div class="layout">
+      <h3>linear</h3>
+      <div class="race-track">
+        <img id="img1" src="salman-khan-tzh.jpg" alt="" />
+      </div>
+      <h3>ease => Slow start + fast + Slow end</h3>
+      <div class="race-track">
+        <img
+          id="img2"
+          src="Dhammal-plane-scene.png"
+          alt=""
+        />
+      </div>
+      <h3>ease-in => Slow start + fast End</h3>
+      <div class="race-track">
+        <img id="img3" src="Dhmaal-car-scene.png" alt="" />
+      </div>
+      <h3>ease-out => start fast + Slow End</h3>
+      <div class="race-track">
+        <img id="img4" src="Road-Roller-Scene.png" alt="" />
+      </div>
+      <h3>ease-in-out => Slow start + Slow End</h3>
+      <div class="race-track">
+        <img
+          id="img5"
+          src="Welcome-movie-car-scene.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
