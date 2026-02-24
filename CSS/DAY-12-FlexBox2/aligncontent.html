@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .parent {
+        width: 450px;
+        height: 400px;
+        background-color: #ddd;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        /* align-content: space-around; */
+      }
+      .child {
+        width: 100px;
+        height: 100px;
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>align-content Property</h1>
+    <div class="parent">
+      <div class="child">Child-1</div>
+      <div class="child">Child-2</div>
+      <div class="child">Child-3</div>
+      <div class="child">Child-4</div>
+      <div class="child">Child-5</div>
+      <div class="child">Child-6</div>
+      <div class="child">Child-7</div>
+      <div class="child">Child-8</div>
+    </div>
+  </body>
+</html>

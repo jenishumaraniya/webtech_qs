@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 15px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+      .viewport-width {
+        height: 100px;
+
+        width: 50vw;
+        background-color: blue;
+      }
+      .viewport-height {
+        width: 300px;
+        height: 50vh;
+        background-color: green;
+        /* margin-bottom: 80vh; */
+      }
+      .percnt {
+        width: 800px;
+        height: 350px;
+        background-color: violet;
+      }
+      .child {
+        width: 50%;
+        height: 50%;
+        background-color: purple;
+      }
+      .rem {
+        font-size: 2rem;
+      }
+      .parent {
+        font-size: 30px;
+      }
+      .em {
+        font-size: 1.5em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS UNITS</h1>
+    <h3>1. px (pixel) -> Means fixed size doesn't matter screen size</h3>
+    <div class="box" id="box1"></div>
+    <h3>2. vw -> Viewport Width</h3>
+    <div class="viewport-width"></div>
+    <h3>3. vh -> Viewport height</h3>
+    <div class="viewport-height"></div>
+    <h3>4. % -> Percentage (depends upon parent size)</h3>
+    <div class="percnt">
+      <div class="child"></div>
+    </div>
+    <h3>5. rem -> Root Element Size (html)</h3>
+    <p>1rem = 16px (by default)</p>
+    <p class="rem">This paragraph has a font size of 2rem.</p>
+    <h3>
+      6. em -> Elment Size (1em = 16px) -> It will take the reference of the
+      parent font size.
+    </h3>
+    <div class="parent">
+      <h2>Heading has a size of 30px</h2>
+      <p class="em">This paragraph has a size of</p>
+    </div>
+  </body>
+</html>

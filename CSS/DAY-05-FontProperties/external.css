@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Playwrite NZ Basic", cursive;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 1. Targeting by their attribute name */
+      input[type] {
+        background-color: yellow;
+      }
+      /* 2. by exact value */
+      input[type="password"] {
+        border: 2px solid blue;
+      }
+      /* 3. Target the word present inside anywhere in the attribute value */
+      a[href*="qspiders"] {
+        text-decoration: none;
+      }
+      /* 4. The exact word is present inside the entire attribute value */
+      button[class~="btn"] {
+        background-color: gray;
+        padding: 8px 10px;
+        font-size: 20px;
+        color: white;
+      }
+      .primary {
+        border: 2px solid red;
+      }
+      /* 5. Ending with value */
+      img[src$="png"] {
+        border: 2px solid saddlebrown;
+      }
+      img[src$="jpg"] {
+        border: 2px solid slateblue;
+      }
+
+      /* 6. Starting value */
+      p[class^="first"] {
+        background-color: skyblue;
+      }
+      p[class^="second"] {
+        background-color: salmon;
+      }
+
+      /* 7. Hyphen value */
+      p[class|="en"] {
+        border: 2px solid rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attribute Selector</h1>
+    <h2>Input Elements</h2>
+    <input type="text" placeholder="Enter your name" />
+    <input type="email" placeholder="Enter your email" />
+    <input type="password" placeholder="Enter your password" />
+    <br />
+    <br />
+    <!-- Links -->
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.facebook.com/">Facebook</a>
+    <a href="https://www.qspiders.com/">Qspiders</a>
+
+    <!-- Buttons -->
+    <button class="btn primary">Primary</button>
+    <button class="btn secondary">Secondary</button>
+    <br />
+    <br />
+    <!-- Images -->
+    <img src="banner.jpg" alt="Banner" />
+    <img src="logo.png" alt="Logo" />
+    <br />
+    <br />
+    <p class="first para">First Paragraph</p>
+    <p class="second para">Second Paragraph</p>
+    <br />
+    <br />
+    <p class="en-IN">Namste India</p>
+    <p class="en">Hello</p>
+    <p class="en-fr">Bonjour</p>
+    <p class="sp-en">Ciao</p>
+    <p class="jp">Konnichiwa</p>
+  </body>
+</html>

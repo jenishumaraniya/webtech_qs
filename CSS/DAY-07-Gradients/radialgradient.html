@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 1px solid #ddd;
+        margin: 30px auto;
+      }
+      #box1 {
+        background-image: radial-gradient(red, yellow);
+      }
+      #box2 {
+        background-image: radial-gradient(skyblue, blue);
+      }
+      #box3 {
+        background-image: radial-gradient(
+          violet,
+          indigo,
+          blue,
+          green,
+          yellow,
+          orange,
+          red
+        );
+      }
+      #box4 {
+        background-image: radial-gradient(
+          violet 0% 15%,
+          indigo 15% 30%,
+          blue 30% 45%,
+          green 45% 60%,
+          yellow 60% 75%,
+          orange 75% 90%,
+          red 90% 100%
+        );
+      }
+      #box5 {
+        background-image: repeating-radial-gradient(red 0% 10%, yellow 10% 20%);
+      }
+      #box6 {
+        background-image: repeating-radial-gradient(black 0% 5%, white 5% 10%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>2. Radial Gradient in CSS</h1>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <div class="box" id="box5"></div>
+    <div class="box" id="box6"></div>
+  </body>
+</html>

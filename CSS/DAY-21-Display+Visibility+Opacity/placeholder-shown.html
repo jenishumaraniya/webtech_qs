@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: #333;
+      }
+      input {
+        width: 65%;
+        font-size: 20px;
+        margin: 10px;
+        padding: 10px;
+        outline: none;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      input:placeholder-shown {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        placeholder="Enter your name here"
+        value="The defualt value of name is JOHN"
+      />
+
+      <input type="text" placeholder="currently value is not available" />
+    </form>
+  </body>
+</html>

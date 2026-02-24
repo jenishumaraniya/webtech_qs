@@ -1,0 +1,10 @@
+Ways to provide css:
+
+1. By color name
+2. By using rgb() value
+3. By using rgba() value
+4. By using Hexdecimal Values
+5. By using HSL() value
+6. By using HSLA() value
+
+

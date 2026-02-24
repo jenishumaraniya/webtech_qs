@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 40px;
+      }
+      .parent {
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow:
+          rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      }
+      .box {
+        width: 30%;
+        height: 500px;
+        border-radius: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
+      #box1 {
+        background-image: url(./img1.png);
+      }
+      #box2 {
+        background-image: url(./img2.png);
+      }
+      #box3 {
+        background-image: url(./image.png);
+      }
+      @media screen and (min-width: 320px) and (max-width: 700px) {
+        h1 {
+          text-align: center;
+          font-size: 35px;
+          text-decoration: underline;
+        }
+        .parent {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .box {
+          width: 90%;
+          border: 1px solid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media Queries</h1>
+    <div class="parent">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+    </div>
+  </body>
+</html>

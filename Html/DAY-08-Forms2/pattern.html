@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>pattern in Password</h1>
+    <form action="">
+      <label for="">Password:</label>
+      <input
+        type="text"
+        name=""
+        id=""
+        pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8}"
+        title="Password must includes uppercase, lowercase and numbers (max length 8)"
+      />
+      <button>Submit Password</button>
+    </form>
+  </body>
+</html>

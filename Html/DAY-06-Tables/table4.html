@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>rowspan and colspan attribute</h1>
+    <table border="1">
+      <caption>
+        Employees Data
+      </caption>
+      <thead>
+        <tr>
+          <th>Emp.ID</th>
+          <th>Emp.Name</th>
+          <th>Emp.Desg</th>
+          <th>Emp.Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TYS101</td>
+          <td>Meet</td>
+          <td>Frontend Developer</td>
+          <td rowspan="2">30000</td>
+        </tr>
+        <tr>
+          <td>TYS102</td>
+          <td>Divy</td>
+          <td>Java-Full Stack Developer</td>
+          <!-- <td>30000</td> -->
+        </tr>
+        <tr>
+          <td>TYS103</td>
+          <td>Mehul</td>
+          <td>Developer</td>
+          <td>50000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Total Employees:</td>
+          <td>3</td>
+          <td>1Lakh</td>
+          <!-- <td></td> -->
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

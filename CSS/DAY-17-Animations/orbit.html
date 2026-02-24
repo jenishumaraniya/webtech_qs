@@ -1,60 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .moon-orbit {
+        width: 400px;
+        height: 400px;
+        /* border: 3px dashed gray; */
+        border-radius: 50%;
+        position: absolute;
+        animation: rotate 5s linear infinite;
+      }
+      .moon {
+        width: 80px;
+        height: 80px;
+        background-image: url(https://images-assets.nasa.gov/image/PIA00405/PIA00405~large.jpg?w=1920&h=1920&fit=clip&crop=faces%2Cfocalpoint);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 105%;
+        border-radius: 50%;
+        transform: translate(25px, 10px);
+      }
+      .earth {
+        width: 300px;
+        height: 300px;
+        background-image: url(https://explorer1.jpl.nasa.gov/assets/images/galleries/cropped/1972_BlueMarble_115334main_image_feature_329_ys_full.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 115%;
+        border-radius: 50%;
+        animation: rotate 15s linear infinite;
+      }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
         }
-        body{
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            background-color: black;
+        to {
+          transform: rotate(360deg);
         }
-        .moon-orbit{
-            width: 400px;
-            height: 400px;
-            border-radius: 50%;
-            position: absolute;
-            animation: rotate 5s linear infinite;
-        }
-        .moon{
-            width: 80px;
-            height: 80px;
-            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/330px-FullMoon2010.jpg);
-            border-radius: 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .earth{
-            width: 300px;
-            height: 300px;
-            background-image: url(https://i.etsystatic.com/9674889/r/il/c425b8/650861778/il_570xN.650861778_qnm1.jpg);
-            border-radius: 50%;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        @keyframes rotate{
-            from{
-                transform: rotate(0deg);
-            }
-            to{
-                transform: rotate(360deg);
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="earth"></div>
     <div class="moon-orbit">
-        <div class="moon"></div>
+      <div class="moon"></div>
     </div>
-</body>
+  </body>
 </html>

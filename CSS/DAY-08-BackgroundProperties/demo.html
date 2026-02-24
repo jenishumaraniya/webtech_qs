@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      header {
+        width: 100%;
+        height: 80px;
+        background: url(https://wallpapers.com/images/hd/spider-man-homecoming-1999-x-1125-qwtso30ip2auqj3y.jpg)
+          no-repeat center/cover;
+      }
+      h2 {
+        text-align: center;
+        font-size: 25px;
+        padding: 10px 20px;
+      }
+      p {
+        text-align: center;
+        color: gray;
+      }
+      .container {
+        width: 90%;
+        height: 400px;
+        border: 1px solid;
+        margin: 20px auto;
+      }
+      .box {
+        width: 300px;
+        height: 180px;
+        border: 1px solid red;
+        display: inline-block;
+        padding: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      #box1 {
+        background-image: url(https://wallpapers.com/images/hd/spider-man-homecoming-1999-x-1125-qwtso30ip2auqj3y.jpg);
+      }
+      .rent {
+        width: 65px;
+        border-radius: 3px;
+        color: white;
+        background-color: crimson;
+        padding: 2px;
+      }
+      .inner-div {
+        width: 200px;
+        height: 100px;
+        border: 1px solid transparent;
+        margin-top: 40px;
+        margin-left: 35px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      #box6:hover {
+        /* box-shadow: 2px 0px 1px 2px black; */
+        box-shadow:
+          rgba(0, 0, 0, 0.25) 0px 54px 55px,
+          rgba(0, 0, 0, 0.12) 0px -12px 30px,
+          rgba(0, 0, 0, 0.12) 0px 4px 6px,
+          rgba(0, 0, 0, 0.17) 0px 12px 13px,
+          rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <h2>Spiderman: Brand New Day</h2>
+    <p>New upcoming movie for the spiderman series in Marval.</p>
+    <div class="container">
+      <div class="box" id="box1">
+        <div class="rent">For Rent</div>
+        <div class="inner-div"></div>
+      </div>
+      <div class="box" id="box2">Box-2</div>
+      <div class="box" id="box3">Box-3</div>
+      <div class="box" id="box4">Box-4</div>
+      <div class="box" id="box5">Box-5</div>
+      <div class="box" id="box6">Box-6</div>
+      <div class="box" id="box7">Box-7</div>
+      <div class="box" id="box8">Box-8</div>
+    </div>
+  </body>
+</html>

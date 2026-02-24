@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        height: 100vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .loader {
+        width: 60px;
+        height: 60px;
+        border: 5px solid white;
+        border-right: 5px solid crimson;
+        border-radius: 50%;
+        animation: spinner 1s linear infinite;
+        /* animation: spinner 1s linear infinite, blink 1.5s ease-in-out infinite; */
+      }
+      p {
+        color: #fff;
+        animation: blink 1.5s ease-in-out infinite;
+      }
+      @keyframes spinner {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes blink {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <p>Loading...</p>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #para1::first-letter {
+        color: blue;
+        font-size: 25px;
+      }
+      #para2::first-line {
+        color: red;
+      }
+      #para2::after {
+        content: "End";
+        font-size: 30px;
+        color: fuchsia;
+      }
+      #para2::before{
+        content: "Start";
+        font-size: 30px;
+        color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Element Selector</h1>
+    <p id="para1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, expedita!
+    </p>
+    <p id="para2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatum
+      quasi sint fuga eius dolores alias sunt tempora at cum numquam ipsam
+      veritatis voluptatibus illo dignissimos rerum, consequuntur minima ullam?
+      Nemo recusandae hic assumenda porro numquam debitis sed necessitatibus
+      doloribus quo itaque iure nihil ducimus, consectetur ipsa, odit fugiat ex
+      dolorum, illum dignissimos molestias quaerat aspernatur animi! Ab, nisi
+      in. pariatur ad exercitationem doloremque consequatur natus magnam ducimus
+      aliquid cupiditate soluta? Provident, accusamus nisi.
+    </p>
+  </body>
+</html>

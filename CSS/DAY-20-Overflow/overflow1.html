@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid;
+        margin: 20px;
+      }
+      #box1 {
+        /* overflow: visible; */
+        /* overflow: hidden; */
+        overflow: auto;
+        /* overflow: scroll; */
+      }
+      #box2 {
+        white-space: nowrap;
+        /* overflow: auto; */
+        overflow-x: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Overflow Properties</h1>
+    <h3>overflow: visible</h3>
+    <div class="box" id="box1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, expedita
+      enim, autem porro aperiam dolorum aliquid soluta itaque, pariatur incidunt
+      a. Sit exercitationem sequi provident totam numquam earum laboriosam
+      reprehenderit! Voluptas non laboriosam tempora expedita accusamus error
+      esse necessitatibus enim similique fugit, animi maxime, culpa iusto
+      repellat et quaerat quo, reprehenderit possimus! Cupiditate perferendis
+      totam ab facere iure. Eaque, esse. Iste sit doloribus ut harum hic
+      nesciunt tempore ea nostrum consectetur fuga? Vitae, omnis voluptatibus
+      dolor, culpa perspiciatis debitis ab, eos doloremque iste explicabo
+      impedit quas deserunt reprehenderit vel quod!
+    </div>
+    <h3>overflow-x:visible</h3>
+    <div class="box" id="box2">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam impedit
+      quia molestias corrupti nam quidem excepturi illo aspernatur at explicabo.
+    </div>
+  </body>
+</html>

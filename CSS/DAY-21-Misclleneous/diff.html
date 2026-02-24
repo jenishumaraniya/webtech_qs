@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+            font-weight: 500;
+            padding: 20px;
+        }
+        .wrapper{
+            width: 50%;
+            background-color: blanchedalmond;
+            border: 1px solid;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+        #wrapper1:hover #box1{
+            display: none;
+        }
+        #wrapper2:hover #box2{
+            visibility: hidden;
+        }
+        #wrapper3:hover #box3{
+            opacity: 0%;
+        }
+    </style>
+</head>
+<body>
+    <h1>display</h1>
+    <div class="wrapper" id="wrapper1">
+        <h2>Hover to see the Demo of display : none</h2>
+        <div class="box" id="box1"></div>
+    </div>
+    <div class="wrapper" id="wrapper2">
+        <h2>Hover to see visibility : hidden</h2>
+        <div class="box" id="box2"></div>
+    </div>
+    <div class="wrapper" id="wrapper3">
+        <h2>Hover to see opacity:0% to 100%</h2>
+        <div class="box" id="box3"></div>
+    </div>
+</body>
+</html>

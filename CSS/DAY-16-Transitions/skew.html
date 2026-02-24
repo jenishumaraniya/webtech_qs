@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .parent {
+        background-color: black;
+        width: 80%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 150px 50px;
+      }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orangered;
+        color: white;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        transition: all 0.5s linear;
+      }
+      .box:nth-child(1) {
+        transform: skew(20deg);
+      }
+      .box:nth-child(2) {
+        transform: skewY(20deg);
+      }
+      .box:nth-child(3) {
+        transform: skew(-25deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>skew property in CSS</h1>
+    <div class="parent">
+      <div class="box" id="box1">Skew-x</div>
+      <div class="box" id="box2">Skew-y</div>
+      <div class="box" id="box3">Skew-x</div>
+    </div>
+  </body>
+</html>
